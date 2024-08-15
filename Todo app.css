@@ -1,0 +1,161 @@
+/* General style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.userList::-webkit-scrollbar {
+  background-color: lightgoldenrodyellow;
+  width: 0.5em;
+  border-radius: 15px;
+  scroll-margin-left: 15px;
+}
+/* Animated background */
+svg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #0e4166;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(14, 65, 102, 0.86),
+    #0e4166
+  );
+}
+/* Target all input type with text */
+#user-data:focus,
+#userName:focus {
+  border: 2px solid darkgrey;
+}
+/* style for the whole app */
+.Todo {
+  display: grid;
+  place-items: center;
+}
+.todo-app {
+  overflow: hidden;
+  width: 400px;
+  background: linear-gradient(rgb(22, 27, 191), rgb(107, 103, 212));
+  padding: 20px 5px 10px 5px;
+  margin: 1em auto;
+  border-radius: 1em;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+/* Welcome style */
+.welcome-user {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 36px;
+}
+.fa-user-plus {
+  position: absolute;
+  right: 13%;
+  cursor: pointer;
+}
+.fa-user-plus:hover {
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#userName {
+  padding: 7px 5px;
+  width: 80%;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 1px solid;
+  outline: 0;
+  margin-bottom: 3px;
+}
+/* Profile picture style */
+.profile-pics {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: none;
+  margin: 4.5em auto 40px;
+}
+#picture {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: cover;
+  color: white;
+}
+input[type="file"] {
+  color: white;
+  z-index: 1;
+  font-size: 17px;
+  padding: 6px;
+  text-align: center;
+  outline: 0;
+}
+/* user input style */
+.todo-content {
+  width: 100%;
+}
+#user-data {
+  padding: 6px 5px;
+  width: 69%;
+  margin: 1em auto 8px;
+  border-radius: 5px;
+  font-size: 17px;
+  border: 1px solid;
+  outline: 0;
+}
+li {
+  padding-bottom: 5px;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.add-data {
+  padding: 8px 15px;
+  background-color: black;
+  color: white;
+  font-size: 1.2em;
+  border: 2px solid black;
+  border-radius: 1em;
+  cursor: pointer;
+}
+.userOutput {
+  display: flex;
+  justify-content: space-between;
+}
+.fa-trash-o {
+  font-size: 1.4em;
+  cursor: pointer;
+}
+.fa-trash-o:hover {
+  width: 22px;
+  height: 28px;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.userList {
+  height: calc(100vh - 85vh);
+  overflow-y: auto;
+}
+/* Style for User mobile phone */
+@media screen and (max-width: 450px) {
+  h2 {
+    font-size: 1.4em;
+    font-weight: 500;
+  }
+  .todo-app {
+    width: 90vw;
+  }
+  .add-data {
+    width: calc(100% - 71%);
+    padding: 6px;
+    font-size: 1.1em;
+  }
+}
